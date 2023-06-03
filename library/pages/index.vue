@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <p class="text-xl text-blue-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium aperiam ex esse accusantium saepe natus minima illo at eveniet numquam explicabo magni velit corrupti, veritatis sapiente, tempora nisi minus reiciendis.</p>
+    <div class="landing">
+        <Nav />
     </div>
 </template>
 
@@ -9,5 +9,11 @@
 </script>
 
 <style scoped>
-
+.landing {
+    background-image: url("/images/banner-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding-top: 30px;
+}
 </style>
