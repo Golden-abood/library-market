@@ -1,6 +1,7 @@
 <template>
     <div class="landing">
         <Nav />
+        <Landing />
     </div>
 </template>
 
