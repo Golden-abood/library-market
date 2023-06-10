@@ -2,8 +2,8 @@
 export default defineNuxtConfig({
     modules: [
         '@unocss/nuxt',
+        'nuxt-swiper'
     ],
-
     app: {
         head: {
           title: 'Library Market | Golden',
@@ -17,5 +17,12 @@ export default defineNuxtConfig({
             }
           ]
         }
-      }
+    },
+    swiper: {
+      // Swiper options
+      //----------------------
+      // prefix: 'Swiper',
+      // styleLang: 'css',
+      // modules: ['navigation', 'pagination'], // all modules are imported by default
+    }
 })
