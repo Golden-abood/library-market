@@ -14,7 +14,7 @@
     background-image: url("/images/banner-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 130vh;
     padding-top: 30px;
 }
 </style>

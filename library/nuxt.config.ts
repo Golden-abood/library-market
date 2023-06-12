@@ -21,8 +21,8 @@ export default defineNuxtConfig({
     swiper: {
       // Swiper options
       //----------------------
-      // prefix: 'Swiper',
-      // styleLang: 'css',
-      // modules: ['navigation', 'pagination'], // all modules are imported by default
+      prefix: 'Swiper',
+       styleLang: 'css',
+       modules: ['navigation', 'pagination'], // all modules are imported by default
     }
 })
