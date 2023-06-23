@@ -1,13 +1,16 @@
 <template>
-    <div>
-
-    </div>
+  <div>
+    <NavTwo />
+    <Details
+      name="Explore"
+      title="Liberty NFT Market"
+      text="DISCOVER SOME TOP ITEMS"
+      :show-button="false"
+    />
+    <ExploreDescoverItems />
+  </div>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts"></script>
 
-</script>
-
-<style scoped>
-
-</style>
+<style scoped></style>

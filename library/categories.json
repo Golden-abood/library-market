@@ -1,0 +1,26 @@
+[
+    {
+        "icon" : "images/icon-01.png" ,
+        "text" : "Blockchain"
+    }, 
+    {
+        "icon" : "images/icon-02.png" ,
+        "text" : "Digital Art"
+    }, 
+    {
+        "icon" : "images/icon-03.png" ,
+        "text" : "Digital Art"
+    }, 
+    {
+        "icon" : "images/icon-04.png" ,
+        "text" : "Virtual World"
+    }, 
+    {
+        "icon" : "images/icon-05.png" ,
+        "text" : "Valuable"
+    }, 
+    {
+        "icon" : "images/icon-06.png" ,
+        "text" : "Triple NFT"
+    } 
+]

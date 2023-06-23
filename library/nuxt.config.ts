@@ -2,7 +2,9 @@
 export default defineNuxtConfig({
     modules: [
         '@unocss/nuxt',
-        'nuxt-swiper'
+        'nuxt-swiper',
+        '@pinia/nuxt',
+        'nuxt-icon'
     ],
     app: {
         head: {

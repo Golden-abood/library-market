@@ -1,13 +1,18 @@
 <template>
-    <div>
+  <div>
+    <NavTwo />
 
-    </div>
+    <Details
+      name="Create Yours"
+      text="CREATE YOUR NFT NOW."
+      title="Liberty NFT Market"
+      :show-button="true"
+    />
+    <FormLibrary />
+    <Footer />
+  </div>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts"></script>
 
-</script>
-
-<style scoped>
-
-</style>
+<style scoped></style>
