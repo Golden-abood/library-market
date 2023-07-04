@@ -1,6 +1,5 @@
 <template>
     <div>
-        <NavTwo />
         <Details name="Author" text="VIEW DETAILS FOR AUTHOR" title="Author Details" :showButton="true"/>
         <AuthorItems />
         <Create />

@@ -1,5 +1,5 @@
 <template>
-    <nuxt-link :class="{back : back  } "  
+    <nuxt-link :class="{back : back } "  
         class="bg-primary font-medium block rounded-6 border-1 border-primary border-solid py-3 px-6 cursor-pointer text-white">
         {{ props.text }}
     </nuxt-link>
@@ -34,7 +34,7 @@ a:first-child::after {
     position: absolute;
     bottom: 0.5px;
     left: 19px;
-    width:22%;
+    width:18%;
     height: 2px;
     background-color: white;
 }
@@ -42,8 +42,8 @@ a:last-child::after{
     content : "";
     position: absolute;
     bottom: 0.5px;
-    right: 46%;
-    width:22%;
+    right: 55%;
+    width:18%;
     height: 2px;
     background-color: white;
 }

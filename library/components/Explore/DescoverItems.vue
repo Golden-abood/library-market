@@ -1,16 +1,31 @@
 <template>
   <div class="cat relative">
     <div class="wrapper-swiper">
-      
+      <swiper
+        :modules="modules"
+        :slides-per-view="3"
+        :space-between="40"
+        navigation
+        @swiper="onSwiper"
+        @slideChange="onSlideChange"
+      >
+        <swiper-slide v-for="item in explore" >
+          <img :src="item.featured" class="rounded-5" />
+        </swiper-slide>
+      </swiper>
     </div>
     <div class="flex justify-between items-center">
-        <BaseTheTitle text="Discover Some Of Our Items." title="" />
-        <div class="right">
-            <input type="text" placeholder="Type Something">
-            <select name="" id="">All Categories</select>
-            <select name="" id="">Available</select>
-            <BaseTheButton text="Search" :back="true"/>
-        </div>
+      <BaseTheTitle text="Discover Some Of Our Items." title="" />
+      <div class="right">
+        <input type="text" placeholder="Type Something" />
+        <select name="" id="">
+          All Categories
+        </select>
+        <select name="" id="">
+          Available
+        </select>
+        <BaseTheButton text="Search" :back="true" />
+      </div>
     </div>
   </div>
 </template>
@@ -25,7 +40,14 @@ const { explore } = storeToRefs(appStore);
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import { BaseTheTitle } from "~/.nuxt/components";
+
+const onSwiper = (swiper: any) => {
+  console.log(swiper);
+};
+const onSlideChange = () => {
+  console.log("slide change");
+};
+const modules = [Navigation]
 
 </script>
 

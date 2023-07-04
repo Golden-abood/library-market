@@ -5,12 +5,16 @@ import authors from "~/authors.json"
 import create from "~/create.json"
 import explore from "~/explore.json"
 import prices from '~/prices.json'
+import collections from '~/collections.json'
+import itemsMarket from '~/itemsMarket.json'
 export const useAppStore = defineStore('app', {
   state: () => ({
     catigories,
     authors,
     create,
     explore,
-    prices
+    prices,
+    itemsMarket,
+    collections
   }),
 })

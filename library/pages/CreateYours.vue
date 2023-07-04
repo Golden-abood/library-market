@@ -1,7 +1,5 @@
 <template>
   <div>
-    <NavTwo />
-
     <Details
       name="Create Yours"
       text="CREATE YOUR NFT NOW."

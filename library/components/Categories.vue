@@ -1,30 +1,32 @@
 <template>
-  <div class="cat">
-    <div class="wrapper text-center flex-col items-center justify-center">
-      <div class="relative">
-        <BaseTheTitle
-          text="Browse Through Our Categories Here."
-          title=""
-          class="pt-[150px] active"
-        />
-      </div>
-      <div class="categories mt-[100px] ml-[120px]">
+  <div class="cat relative text-center pb-[150px]">
+    <BaseTheTitle
+      text="Browse Through Our Categories Here."
+      title=""
+      class="pt-[150px] active"
+    />
+    <div>
+      <div class="wrapper">
         <div
-          v-for="category in catigories"
-          :key="category.icon"
-          class="jsutify-center m-auto"
+          class="grid grid-cols-1 sm:grid-cols-6 place-content-center gap-6 mt-[100px]"
         >
-          <div
-            class="category bg-light p-[30px] rounded-6 border-2 border-solid border-[#404245]"
-          >
-            <img
-              :src="category.icon"
-              class="bg-white rounded-full p-2 bg-cover"
-            />
-            <h3 class="text-white mt-[10px]">{{ category.text }}</h3>
+          <div v-for="category in catigories" :key="category.icon" class="relative">
+            <div
+              class="category bg-light p-[30px] rounded-6 border-2 border-solid border-[#404245]"
+            >
+              <img
+                :src="category.icon"
+                class="bg-white rounded-full p-2 bg-cover"
+              />
+              <h3 class="text-white mt-[10px]">{{ category.text }}</h3>
+            <template>
+              <MaterialIconHome/>
+            </template>
+            </div>
           </div>
         </div>
       </div>
+      <Collections />
     </div>
   </div>
 </template>
@@ -45,10 +47,16 @@ const { catigories } = storeToRefs(appStore);
   width: 100%;
 }
 .wrapper {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 80px;
+  padding-right: 80px;
   margin-left: auto;
   margin-right: auto;
+}
+@media (max-width: 768px) {
+  .wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 h3 {
   color: white;
@@ -63,10 +71,21 @@ h3 {
   height: 3px;
   background-color: #7453fc;
 }
-.categories {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-  gap: 20px 25px;
-  position: relative;
+.category::after {
+  content:"\f105";
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border-radius: 50%;
+  width: 40px;
+  height:40px;
+  opacity: 0;
+  transition: 0.3s;
 }
+.category:hover::after{
+  opacity: 1;
+  
+} 
 </style>
