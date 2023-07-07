@@ -1,9 +1,9 @@
 <template>
-  <div class="pt-[100px]">
+  <div>
     <div
-      class="lg:flex lg:justify-between items-center ml-[20px] mr-[20px] md:ml-[110px] mt-[140px]"
+      class="lg:flex lg:justify-between items-center ml-[20px] mr-[20px] lg:ml-[110px] mt-[140px]"
     >
-      <div class="text-white md:max-w-[50%]">
+      <div class="text-white lg:max-w-[50%]">
         <p class="font-medium text-xl mb-[15px] tracking-normal">
           Liberty NFT Market
         </p>

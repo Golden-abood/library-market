@@ -1,7 +1,7 @@
 <template>
   <div
     :class="{ fixed: isFixed }"
-    class="relative flex justify-between items-center bg-white ml-0 w-[100%] lg:w-[85%] lg:ml-[110px] mr-[110px] px-[40px] py-[20px] sm:mt-0 rounded-0 lg:rounded-12 z-[10000]"
+    class="relative flex justify-between items-center bg-white ml-0 w-[100%] lg:w-[85%] lg:ml-[110px] mr-[110px] px-[30px] py-[15px] sm:mt-0 rounded-0 lg:rounded-12 z-[10000]"
   >
     <img src="/images/logo.png" />
     <div
@@ -59,8 +59,9 @@ import { ref, onMounted, onUnmounted } from "vue";
 const isFixed = ref(false);
 
 const handleScroll = () => {
-  isFixed.value = window.pageYOffset >= 0;
+  isFixed.value = window.pageYOffset > 500;
 };
+0;
 
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);

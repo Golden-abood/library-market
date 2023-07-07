@@ -8,9 +8,13 @@
     <div>
       <div class="wrapper">
         <div
-          class="grid grid-cols-1 sm:grid-cols-6 place-content-center gap-6 mt-[100px]"
+          class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-6 place-content-center gap-6 mt-[100px]"
         >
-          <div v-for="category in catigories" :key="category.icon" class="relative">
+          <div
+            v-for="category in catigories"
+            :key="category.icon"
+            class="relative"
+          >
             <div
               class="category bg-light p-[30px] rounded-6 border-2 border-solid border-[#404245]"
             >
@@ -19,9 +23,6 @@
                 class="bg-white rounded-full p-2 bg-cover"
               />
               <h3 class="text-white mt-[10px]">{{ category.text }}</h3>
-            <template>
-              <MaterialIconHome/>
-            </template>
             </div>
           </div>
         </div>
@@ -61,8 +62,11 @@ const { catigories } = storeToRefs(appStore);
 h3 {
   color: white;
 }
+.category {
+  counter-increment: category;
+}
 .active::before {
-  content: "";
+  content: "" ;
   position: absolute;
   top: 120px;
   left: 50%;
@@ -72,7 +76,7 @@ h3 {
   background-color: #7453fc;
 }
 .category::after {
-  content:"\f105";
+  content: "" ;
   position: absolute;
   top: 85%;
   left: 50%;
@@ -80,12 +84,11 @@ h3 {
   background-color: white;
   border-radius: 50%;
   width: 40px;
-  height:40px;
+  height: 40px;
   opacity: 0;
   transition: 0.3s;
 }
-.category:hover::after{
+.category:hover::after {
   opacity: 1;
-  
-} 
+}
 </style>

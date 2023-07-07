@@ -5,13 +5,13 @@
       title=""
       class="pt-[150px] text-center"
     />
-    <div class="sm:flex justify-center gap-x-[50px] items-center mt-[100px]">
-      <div class="left max-w-[90%] sm:max-w-[50%] m-auto sm:m-0">
+    <div class="lg:flex justify-center gap-x-[50px] items-center mt-[100px]">
+      <div class="left max-w-[70%] lg:max-w-[50%] m-auto lg:m-0">
         <img src="/images/item-details-01.jpg" class="rounded-5 w-[100%]" />
       </div>
-      <div class="right max-w-[90%] sm:max-w-[30%] m-auto sm:m-0 pt-[20px] sm:pt-0">
+      <div class="right max-w-[70%] lg:max-w-[30%] m-auto lg:m-0 pt-[20px] lg:pt-0">
         <h4 class="text-xl mb-[25px]">{{ props.title }}</h4>
-        <div class="flex justify-between w-[40%] items-center pb-[30px]">
+        <div class="flex gap-x-4 w-[40%] items-center pb-[30px]">
           <img :src="props.photo" class="rounded-full w-[30%]" />
           <div class="leading-5">
             <h6 class="text-base font-normal">Liberty Artist</h6>

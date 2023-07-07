@@ -25,13 +25,17 @@
         </div>
       </div>
     </div>
-    <BaseTheTitle text="Melanie Smith’s Items." title="abood" class="pt-[100px]" />
+    <BaseTheTitle
+      text="Melanie Smith’s Items."
+      title="abood"
+      class="pt-[100px]"
+    />
     <div class="cards py-[100px]">
       <div
         v-for="author in authors"
         class="card relative text-white flex-col justify-center rounded-5 py-[40px] px-[30px] bg-light border-1 border-solid border-bocolor"
-        >
-        <Card :element="author"/>
+      >
+        <Card :element="author" />
       </div>
     </div>
   </div>

@@ -5,19 +5,38 @@
       title=""
       text="Explore Some Hot Collections In Market."
     />
-    <div class="wrapper-swiper pb-[100px] px-[120px]">
+    <div class="wrapper-swiper  px-[20px] lg:px-[120px]">
       <swiper
+        :loop="true"
         :modules="modules"
         :slides-per-view="3"
         :space-between="20"
-        navigation
+        :navigation="true"
         @swiper="onSwiper"
         @slideChange="onSlideChange"
-        
+        :autoplay="{
+          delay: 2500,
+          disableOnInteraction: false,
+        }"
+        :breakpoints="{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          700 :{
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          // when window width is >= 480px
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+        }"
       >
         <swiper-slide
           v-for="collection in collections"
-          class="h-[150%] mt-[100px] text-white overflow-hidden bg-light rounded-6 border-sloid border-1 border-bocolor pb-9 px-0"
+          class="pb-[100px] relative mt-[100px] text-white overflow-hidden bg-light rounded-6 border-sloid border-1 border-bocolor px-0"
         >
           <div class="flex-col items-start relative">
             <img
@@ -39,12 +58,13 @@
                 <span class="font-bold text-xl">{{ collection.category }}</span>
               </div>
             </div>
-            <BaseTheButton
+
+          </div>
+          <BaseTheButton
               :back="false"
               text="Explore Worldwide"
-              class="w-[80%] absolute bottom-[-60px] left-[50%] translate-x-[-50%] z-[100]"
+              class="w-[80%] absolute bottom-[20px] left-[50%] translate-x-[-50%] z-[100]"
             />
-          </div>
         </swiper-slide>
       </swiper>
     </div>
@@ -53,7 +73,7 @@
 
 <script setup lang="ts">
 import { storeToRefs } from "pinia";
-import { A11y, Navigation, Pagination, Scrollbar } from "swiper";
+import { Autoplay, Navigation, Pagination, Scrollbar } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { useAppStore } from "~/stores/app";
 const appStore = useAppStore();
@@ -61,6 +81,7 @@ const { collections } = storeToRefs(appStore);
 
 // Import Swiper styles
 import "swiper/css";
+
 const onSwiper = (swiper: any) => {
   console.log(swiper);
 };
@@ -68,11 +89,10 @@ const onSlideChange = () => {
   console.log("slide change");
 };
 
-const modules = [Navigation, Pagination, Scrollbar, A11y];
+const modules = [Navigation, Pagination, Scrollbar, Autoplay];
 </script>
 
 <style scoped>
-.swsiper {
-
+.swiper-slide{
 }
 </style>

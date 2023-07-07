@@ -1,14 +1,29 @@
 <template>
-  <div class="cat m-auto px-[20px] md:px-[110px] pb-[150px]">
-    <div class="flex justify-between pt-[150px]">
-      <BaseTheTitle text="Items Currently In The Market." title="" />
-      <!--            <div v-for="item in list" class="flex justify-around gap-x-0">
-                <p class="text-white">{{ item }}</p>
-            </div>-->
+  <div class="cat m-auto px-[20px] md:px-[110px] pb-[150px] pt-[100px]">
+    <div class="xl:flex justify-center items-center text-center m-auto">
+      <BaseTheTitle
+        text="Items Currently In The Market."
+        title=""
+        class="w-[100%] lg:w-[50%]"
+      />
+      <li
+        class="font-medium cursor-pointer w-[110px] transition duration-100 text-center flex-nowrap text-base min-w-[14%] rounded-5 py-2 text-primary"
+      >
+        <nuxt-link class="nuxt-link-active text-white text-center">{{
+          first
+        }}</nuxt-link>
+      </li>
+      <ul class="flex justify-center">
+        <li
+          v-for="item in list"
+          class="mr-0 md:mr-7 font-medium cursor-pointer w-[110px] m-5 transition duration-100 text-center flex-nowrap text-base min-w-[14%] rounded-5 py-2 text-primary"
+        >
+          <nuxt-link class="nuxt-link text-white">{{ item }}</nuxt-link>
+        </li>
+      </ul>
     </div>
-    <div
-      class="grid grid-cols-1 sm:grid-cols-2 place-content-center gap-8 mt-[100px] md:mr-[100px]"
-    >
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-[100px] md:mr-[100px]">
       <div v-for="item in itemsMarket">
         <div
           class="flex gap-x-8 bg-light p-[40px] rounded-6 border-solid border-1 border-bocolor"
@@ -37,9 +52,7 @@
                 <span>(July 24th, 2022)</span>
               </div>
             </div>
-            <nuxt-link class="text-primary">
-              View Item Details
-            </nuxt-link>
+            <nuxt-link class="text-primary"> View Item Details </nuxt-link>
           </div>
         </div>
       </div>
@@ -56,8 +69,11 @@ const list = ref([
   "All Items",
   "Music Art",
   "Digital Art",
-  "Blockchain Virtual",
+  "Blockchain ",
+  "Virtual",
 ]);
+let first = list.value.shift();
+console.log(list);
 </script>
 
 <style scoped>
@@ -67,5 +83,17 @@ const list = ref([
   background-size: cover;
   min-height: 100vh;
   width: 100%;
+}
+.nuxt-link-active {
+  color: white;
+  background-color: #7453fc;
+  padding: 10px 15px;
+  border-radius: 50px;
+}
+.nuxt-link:hover {
+  color: white;
+  background-color: #7453fc;
+  padding: 10px 15px;
+  border-radius: 50px;
 }
 </style>

@@ -4,7 +4,7 @@
             <BaseTheTitle class="pb-[30px] sm:pb-0" text="Create Your NFT & Put It On The Market." title=""/>
             <BaseTheButton text="Create Your NFT Now" :back="false" class="w-[50%] sm:w-[18%] m-auto sm:m-0"/>
         </div>
-        <div class="steps pt-[50px] sm:pt-[150px] pb[80px] sm:pb-0" >
+        <div class="steps pt-[50px] sm:pt-[150px] pb[80px] lg:pb-[10px]" >
             <div v-for="abood in create" class="step relative text-white text-center sm:text-left  ">
                 <img :src="abood.icon" class="bg-white p-3 mb-[30px] rounded-full">
                 <h3 class="font-bold text-xl mb-[15xp]">{{abood.title}}</h3>
@@ -26,7 +26,7 @@ import { useAppStore } from '~/stores/app';
     background-image: url('/images/main-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 75vh;
     width: 100%;
     background-position: center;
 }

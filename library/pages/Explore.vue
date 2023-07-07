@@ -6,6 +6,8 @@
       text="DISCOVER SOME TOP ITEMS"
       :show-button="false"/>
       <ExploreDescoverItems/>
+      <ExploreTopSellers/>
+      <Footer/>
   </div>
 </template>
 
