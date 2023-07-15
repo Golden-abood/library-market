@@ -32,7 +32,7 @@
     />
     <div class="cards py-[100px]">
       <div
-        v-for="author in authors"
+        v-for="author in authors.slice(0, 4)"
         class="card relative text-white flex-col justify-center rounded-5 py-[40px] px-[30px] bg-light border-1 border-solid border-bocolor"
       >
         <Card :element="author" />
@@ -47,6 +47,9 @@ import { storeToRefs } from "pinia";
 const appStore = useAppStore();
 const { authors } = storeToRefs(appStore);
 
+onMounted(() => {
+  appStore.getAuthors();
+});
 const actions = [
   "material-symbols:favorite-rounded",
   "material-symbols:back-hand",

@@ -5,25 +5,27 @@
       title=""
       text="Explore Some Hot Collections In Market."
     />
-    <div class="wrapper-swiper  px-[20px] lg:px-[120px]">
+    <div class="wrapper-swiper px-[20px] lg:px-[120px]">
       <swiper
         :loop="true"
+        :speed="1000"
         :modules="modules"
         :slides-per-view="3"
         :space-between="20"
-        :navigation="true"
-        @swiper="onSwiper"
-        @slideChange="onSlideChange"
+        :navigation="{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }"
         :autoplay="{
           delay: 2500,
-          disableOnInteraction: false,
+          disableOnInteraction: true,
         }"
         :breakpoints="{
           320: {
             slidesPerView: 1,
             spaceBetween: 20,
           },
-          700 :{
+          700: {
             slidesPerView: 2,
             spaceBetween: 20,
           },
@@ -58,14 +60,17 @@
                 <span class="font-bold text-xl">{{ collection.category }}</span>
               </div>
             </div>
-
           </div>
           <BaseTheButton
-              :back="false"
-              text="Explore Worldwide"
-              class="w-[80%] absolute bottom-[20px] left-[50%] translate-x-[-50%] z-[100]"
-            />
+            :back="false"
+            text="Explore Worldwide"
+            class="w-[80%] absolute bottom-[20px] left-[50%] translate-x-[-50%] z-[100]"
+          />
         </swiper-slide>
+        <div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
       </swiper>
     </div>
   </div>
@@ -73,26 +78,29 @@
 
 <script setup lang="ts">
 import { storeToRefs } from "pinia";
-import { Autoplay, Navigation, Pagination, Scrollbar } from "swiper";
+import { Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { useAppStore } from "~/stores/app";
 const appStore = useAppStore();
 const { collections } = storeToRefs(appStore);
-
-// Import Swiper styles
-import "swiper/css";
-
-const onSwiper = (swiper: any) => {
-  console.log(swiper);
-};
-const onSlideChange = () => {
-  console.log("slide change");
-};
-
-const modules = [Navigation, Pagination, Scrollbar, Autoplay];
+onMounted(()=> {
+  appStore.getCollections()
+})
+const modules = [Navigation];
 </script>
 
 <style scoped>
-.swiper-slide{
+.swiper-button-prev,
+.swiper-button-next {
+  color: #7453fc !important;
+  background-color: white;
+  padding: 20px;
+  font-weight: bold;
+  border-radius: 50%;
+  margin: auto;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 13px;
 }
 </style>

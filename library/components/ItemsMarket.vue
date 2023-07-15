@@ -74,6 +74,9 @@ const list = ref([
 ]);
 let first = list.value.shift();
 console.log(list);
+onMounted(() => {
+  appStore.getItemsMarket()
+});
 </script>
 
 <style scoped>

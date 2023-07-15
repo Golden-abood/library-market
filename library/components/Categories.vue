@@ -11,7 +11,7 @@
           class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-6 place-content-center gap-6 mt-[100px]"
         >
           <div
-            v-for="category in catigories"
+            v-for="category in categories"
             :key="category.icon"
             class="relative"
           >
@@ -36,7 +36,10 @@
 import { storeToRefs } from "pinia";
 import { useAppStore } from "~/stores/app";
 const appStore = useAppStore();
-const { catigories } = storeToRefs(appStore);
+const { categories } = storeToRefs(appStore);
+onMounted(()=> {
+  appStore.getCategories()
+})
 </script>
 
 <style scoped>

@@ -1,0 +1,129 @@
+{
+  "authors": [
+    {
+      "AuthorPhoto": "images/author.jpg",
+      "discover": "images/discover-03.jpg",
+      "title": "Mutant Ape Bored",
+      "current": "2.03 ETH",
+      "end": "25th Nov"
+    },
+    {
+      "AuthorPhoto": "images/author-02.jpg",
+      "discover": "images/discover-06.jpg",
+      "title": "Rambo Ape Bored",
+      "current": "7.89 ETH",
+      "end": "29th Oct"
+    },
+    {
+      "AuthorPhoto": "images/author.jpg",
+      "discover": "images/discover-05.jpg",
+      "title": "Mutant Ape Bored",
+      "current": "9.23 ETH",
+      "end": "22th Jun"
+    },
+    {
+      "AuthorPhoto": "images/author-03.jpg",
+      "discover": "images/discover-04.jpg",
+      "title": "Another Half Ape",
+      "current": "8.03 ETH",
+      "end": "21th Sept"
+    },
+    {
+      "AuthorPhoto": "images/author.jpg",
+      "discover": "images/discover-05.jpg",
+      "title": "Pixel Sand Box",
+      "current": "9.23 ETH",
+      "end": "22th Jun"
+    },
+    {
+      "AuthorPhoto": "images/author-03.jpg",
+      "discover": "images/discover-04.jpg",
+      "title": "Another Half Ape",
+      "current": "8.03 ETH",
+      "end": "21th Sept"
+    },
+    {
+      "AuthorPhoto": "images/author.jpg",
+      "discover": "images/discover-03.jpg",
+      "title": "Invisible NFT Land",
+      "current": "2.03 ETH",
+      "end": "25th Nov"
+    },
+    {
+      "AuthorPhoto": "images/author-02.jpg",
+      "discover": "images/discover-06.jpg",
+      "title": "Another Half Ape",
+      "current": "7.89 ETH",
+      "end": "29th Oct"
+    }
+  ],
+  "collections": [
+    {
+      "title": "Genesis Collective Statue",
+      "category": "Music Art",
+      "items": "530/890",
+      "photo": "/images/collection-01.jpg"
+    },
+    {
+      "title": "Bored Ape Kennel Club",
+      "category": "Visual Art",
+      "items": "320/490",
+      "photo": "/images/collection-01.jpg"
+    },
+    {
+      "title": "Mutant Bored Ape Yacht Club",
+      "category": "Blockchain",
+      "items": "620/910",
+      "photo": "/images/collection-01.jpg"
+    },
+    {
+      "title": "Bored Collective Statue",
+      "category": "Digital Crypto",
+      "items": "150/562",
+      "photo": "/images/collection-01.jpg"
+    }
+  ],
+  "create": [
+    {
+      "icon": "images/icon-02.png",
+      "text": "Lorem ipsum dolor sit amet, consectetu dipiscingei elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "title": "Set Up Your Wallet "
+    },
+    {
+      "icon": "images/icon-04.png",
+      "text": "Lorem ipsum dolor sit amet, consectetu dipiscingei elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "title": "Add Your Digital NFT"
+    },
+    {
+      "icon": "images/icon-06.png",
+      "text": "Lorem ipsum dolor sit amet, consectetu dipiscingei elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "title": "Sell Your NFT & Make Profit"
+    }
+  ],
+  "categories": [
+    {
+      "icon": "images/icon-01.png",
+      "text": "Blockchain"
+    },
+    {
+      "icon": "images/icon-02.png",
+      "text": "Digital Art"
+    },
+    {
+      "icon": "images/icon-03.png",
+      "text": "Digital Art"
+    },
+    {
+      "icon": "images/icon-04.png",
+      "text": "Virtual World"
+    },
+    {
+      "icon": "images/icon-05.png",
+      "text": "Valuable"
+    },
+    {
+      "icon": "images/icon-06.png",
+      "text": "Triple NFT"
+    }
+  ]
+}

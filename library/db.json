@@ -1,0 +1,263 @@
+{
+    "authors": [
+        {
+            "AuthorPhoto": "images/author.jpg",
+            "discover": "images/discover-03.jpg",
+            "title": "Mutant Ape Bored",
+            "current": "2.03 ETH",
+            "end": "25th Nov"
+        },
+        {
+            "AuthorPhoto": "images/author-02.jpg",
+            "discover": "images/discover-06.jpg",
+            "title": "Rambo Ape Bored",
+            "current": "7.89 ETH",
+            "end": "29th Oct"
+        },
+        {
+            "AuthorPhoto": "images/author.jpg",
+            "discover": "images/discover-05.jpg",
+            "title": "Mutant Ape Bored",
+            "current": "9.23 ETH",
+            "end": "22th Jun"
+        },
+        {
+            "AuthorPhoto": "images/author-03.jpg",
+            "discover": "images/discover-04.jpg",
+            "title": "Another Half Ape",
+            "current": "8.03 ETH",
+            "end": "21th Sept"
+        },
+        {
+            "AuthorPhoto": "images/author.jpg",
+            "discover": "images/discover-05.jpg",
+            "title": "Pixel Sand Box",
+            "current": "9.23 ETH",
+            "end": "22th Jun"
+        },
+        {
+            "AuthorPhoto": "images/author-03.jpg",
+            "discover": "images/discover-04.jpg",
+            "title": "Another Half Ape",
+            "current": "8.03 ETH",
+            "end": "21th Sept"
+        },
+        {
+            "AuthorPhoto": "images/author.jpg",
+            "discover": "images/discover-03.jpg",
+            "title": "Invisible NFT Land",
+            "current": "2.03 ETH",
+            "end": "25th Nov"
+        },
+        {
+            "AuthorPhoto": "images/author-02.jpg",
+            "discover": "images/discover-06.jpg",
+            "title": "Another Half Ape",
+            "current": "7.89 ETH",
+            "end": "29th Oct"
+        }
+    ],
+    "collections": [
+        {
+            "title": "Genesis Collective Statue",
+            "category": "Music Art",
+            "items": "530/890",
+            "photo": "/images/collection-01.jpg"
+        },
+        {
+            "title": "Bored Ape Kennel Club",
+            "category": "Visual Art",
+            "items": "320/490",
+            "photo": "/images/collection-01.jpg"
+        },
+        {
+            "title": "Mutant Bored Ape Yacht Club",
+            "category": "Blockchain",
+            "items": "620/910",
+            "photo": "/images/collection-01.jpg"
+        },
+        {
+            "title": "Bored Collective Statue",
+            "category": "Digital Crypto",
+            "items": "150/562",
+            "photo": "/images/collection-01.jpg"
+        }
+    ],
+    "create": [
+        {
+            "icon": "images/icon-02.png",
+            "text": "Lorem ipsum dolor sit amet, consectetu dipiscingei elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "title": "Set Up Your Wallet "
+        },
+        {
+            "icon": "images/icon-04.png",
+            "text": "Lorem ipsum dolor sit amet, consectetu dipiscingei elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "title": "Add Your Digital NFT"
+        },
+        {
+            "icon": "images/icon-06.png",
+            "text": "Lorem ipsum dolor sit amet, consectetu dipiscingei elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "title": "Sell Your NFT & Make Profit"
+        }
+    ],
+    "categories": [
+        {
+            "icon": "images/icon-01.png",
+            "text": "Blockchain"
+        },
+        {
+            "icon": "images/icon-02.png",
+            "text": "Digital Art"
+        },
+        {
+            "icon": "images/icon-03.png",
+            "text": "Digital Art"
+        },
+        {
+            "icon": "images/icon-04.png",
+            "text": "Virtual World"
+        },
+        {
+            "icon": "images/icon-05.png",
+            "text": "Valuable"
+        },
+        {
+            "icon": "images/icon-06.png",
+            "text": "Triple NFT"
+        }
+    ],
+    "itemsMarket": [
+        {
+            "photo": "/images/market-01.jpg",
+            "title": "Music Art Super Item",
+            "Current": "3.64 ETH",
+            "sa": "($6,600.00)",
+            "Ends ": "6D 05H 40M 50S",
+            "date": "(July 28th, 2022)"
+        },
+        {
+            "photo": "/images/market-01.jpg",
+            "title": "Digital Crypto Artwork",
+            "Current": "3.64 ETH",
+            "sa": "($7,600.00)",
+            "Ends ": "4D 05H 40M 50S",
+            "date": "(July 5th, 2022)"
+        },
+        {
+            "photo": "/images/market-01.jpg",
+            "title": "Blockchain Item One",
+            "Current": "1.64 ETH",
+            "sa": "($1,600.00)",
+            "Ends ": "9D 05H 40M 50S",
+            "date": "(July 28th, 2022)"
+        },
+        {
+            "photo": "/images/market-01.jpg",
+            "title": "Virtual Currency Art",
+            "Current": "8.64 ETH",
+            "sa": "($1,600.00)",
+            "Ends ": "8D 05H 40M 50S",
+            "date": "(July 14th, 2022)"
+        },
+        {
+            "photo": "/images/market-01.jpg",
+            "title": "Digital Art Item",
+            "Current": "6.64 ETH",
+            "sa": "($7,600.00)",
+            "Ends ": "6D 07H 40M 50S",
+            "date": "(July 13th, 2021)"
+        },
+        {
+            "photo": "/images/market-01.jpg",
+            "title": "Blockchain Music Design",
+            "Current": "1.64 ETH",
+            "sa": "($6,650.00)",
+            "Ends ": "2D 05H 40M 50S",
+            "date": "(July 18th, 2022)"
+        }
+    ],
+    "explore": [
+        {
+            "AuthorPhoto": "images/author.jpg",
+            "featured": "images/featured-03.jpg",
+            "name": "Bored Ape Club"
+        },
+        {
+            "AuthorPhoto": "images/author-02.jpg",
+            "featured": "images/featured-01.jpg",
+            "name": "Bored Ape Club"
+        },
+        {
+            "AuthorPhoto": "images/author.jpg",
+            "featured": "images/featured-02.jpg",
+            "name": "Bored Ape Club"
+        },
+        {
+            "AuthorPhoto": "images/author-03.jpg",
+            "featured": "images/featured-04.jpg",
+            "name": "Bored Ape Club"
+        }
+    ],
+    "boxs": [
+        {
+            "name": "NFT Top Artist",
+            "desc": "8.6 ETH or $12,000",
+            "icon": "images/author.jpg"
+        },
+        {
+            "name": "George Brandon",
+            "desc": "4.8 ETH or $14,000",
+            "icon": "images/author-02.jpg"
+        },
+        {
+            "name": "Johnny Mayson",
+            "desc": "6.2 ETH or $26,000",
+            "icon": "images/author-03.jpg"
+        },
+        {
+            "name": "Liberty Artist",
+            "desc": "4.5 ETH or $11,600",
+            "icon": "images/author-02.jpg"
+        },
+        {
+            "name": "Ronald Martino",
+            "desc": "7.2 ETH or $14,500",
+            "icon": "images/author-02.jpg"
+        },
+        {
+            "name": "Anthony Brown",
+            "desc": "8.6 ETH or $7,400",
+            "icon": "images/author-03.jpg"
+        },
+        {
+            "name": "NFT Top Artist",
+            "desc": "8.6 ETH or $12,000",
+            "icon": "images/author.jpg"
+        },
+        {
+            "name": "Ronald Martino",
+            "desc": "6.5 ETH or $11,000",
+            "icon": "images/author-02.jpg"
+        },
+        {
+            "name": "David Walker",
+            "desc": "2.5 ETH or $12,000",
+            "icon": "images/author-03.jpg"
+        },
+        {
+            "name": "NFT Top Artist",
+            "desc": "8.6 ETH or $12,000",
+            "icon": "images/author.jpg"
+        },
+        {
+            "name": "Ronald Martino",
+            "desc": "6.5 ETH or $11,000",
+            "icon": "images/author-02.jpg"
+        },
+        {
+            "name": "David Walker",
+            "desc": "2.5 ETH or $12,000",
+            "icon": "images/author-03.jpg"
+        }
+    ]
+}

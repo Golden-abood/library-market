@@ -22,6 +22,9 @@ import { storeToRefs } from "pinia";
 import { useAppStore } from "~/stores/app";
 const appStore = useAppStore();
 const { boxs } = storeToRefs(appStore);
+onMounted(()=> {
+  appStore.getBoxs()
+})
 </script>
 
 <style>
@@ -30,7 +33,7 @@ const { boxs } = storeToRefs(appStore);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 75vh;
-  width: 100%;
+  min-width: 100%;
 }
 .boxs {
   display: grid;

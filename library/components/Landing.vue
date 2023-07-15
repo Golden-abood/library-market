@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="lg:flex lg:justify-between items-center ml-[20px] mr-[20px] lg:ml-[110px] mt-[140px]"
+      class="relative lg:flex lg:justify-between items-center ml-[20px] mr-[20px] lg:ml-[110px] mt-[140px]"
     >
       <div class="text-white lg:max-w-[50%]">
         <p class="font-medium text-xl mb-[15px] tracking-normal">
@@ -29,22 +29,28 @@
       </div>
       <swiper
         :modules="modules"
+        :navigations="{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }"
+        :autoplay="{
+          delay: 2500,
+          disableOnInteraction: true,
+        }"
         :slides-per-view="1"
         :space-between="0"
-        @swiper="onSwiper"
-        @slideChange="onSlideChange"
-        delay
-        pauseOnMouseEnter
-        class="relative max-w-[100%] lg :max-w-[50%] text-center"
+        class="max-w-[100%] lg :max-w-[50%] text-center"
       >
-        <swiper-slide class="pb-[200px] md:pb-0 pt-[70px] md:pt-0">
+        <swiper-slide class="h-[550px] pb-[200px] md:pb-0 pt-[70px] md:pt-0">
           <img src="/images/banner-01.png" class="md:w-[72%]" alt="" />
         </swiper-slide>
         <swiper-slide class="pb-[200px] md:pb-0 pt-[70px] md:pt-0">
           <img src="/images/banner-02.png" class="md:w-[72%]" alt="" />
         </swiper-slide>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="abood">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
       </swiper>
     </div>
   </div>
@@ -53,27 +59,29 @@
 <script setup lang="ts">
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import "swiper/swiper-bundle.css";
+import { Navigation, Autoplay } from "swiper";
 
-const onSwiper = (swiper: any) => {
-  console.log(swiper);
-};
-const onSlideChange = () => {
-  console.log("slide change");
-};
-const modules = [Navigation, Pagination, Scrollbar, A11y];
+const modules = [Navigation];
 </script>
 
 <style scoped>
+.abood {
+  position: relative;
+  z-index: 1000;
+  padding-bottom: 70px;
+}
 .swiper-button-next,
 .swiper-button-prev {
-  color: white;
-  position: absolute;
+  color: #7453fc;
+  background-color: white;
+  border-radius: 50%;
+  padding: 25px;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 16px;
+  font-weight: bold;
 }
 </style>

@@ -70,7 +70,7 @@
       </div>
       <div class="cards pb-[200px] lg:px-[100px]">
         <div
-          v-for="author in items"
+          v-for="author in authors"
           class="card relative text-white flex-col justify-center rounded-5 py-[40px] px-[30px] bg-light border-1 border-solid border-bocolor"
         >
           <Card :element="author" />
@@ -86,8 +86,11 @@ import { Navigation, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { useAppStore } from "../../stores/app";
 const appStore = useAppStore();
-const { explore, items } = storeToRefs(appStore);
-
+const { explore, authors } = storeToRefs(appStore);
+onMounted(()=> {
+  appStore.getAuthors()
+  appStore.getExplore()
+})
 const actions = [
   "material-symbols:favorite-rounded",
   "material-symbols:back-hand",
@@ -97,12 +100,6 @@ const actions = [
 import "swiper/css";
 import "swiper/css/navigation";
 
-const onSwiper = (swiper: any) => {
-  console.log(swiper);
-};
-const onSlideChange = () => {
-  console.log("slide change");
-};
 const list = ref([
   "All Items",
   "Music Art",
