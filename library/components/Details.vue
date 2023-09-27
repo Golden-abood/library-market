@@ -1,7 +1,9 @@
 <template>
-  <div class="cat pt-0 lg:pt-[30px]">
-    <Nav/>
-    <div class="content">
+  <div
+    class="bg-cover bg-no-repeat h-[85vh] bg-center bg-[url(/images/heading-bg.jpg)] pt-0 lg:pt-[30px]"
+  >
+    <Nav />
+    <div class="flex justify-center items-center">
       <div class="text-white text-center pt-[150px]">
         <p class="text-xl mb-[15px] font-medium tracking-wider">
           {{ props.title }}
@@ -33,16 +35,4 @@ const props = defineProps({
 </script>
 
 <style scoped>
-.cat {
-  background-image: url("/images/heading-bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 85vh;
-  background-position: center;
-}
-.content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 </style>

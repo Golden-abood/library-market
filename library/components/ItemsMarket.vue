@@ -1,24 +1,25 @@
 <template>
-  <div class="cat m-auto px-[20px] md:px-[110px] pb-[150px] pt-[100px]">
-    <div class="xl:flex justify-center items-center text-center m-auto">
+  <div
+    class="bg-cover bg-no-repeat min-h-[100vh] w-[100%] bg-[url(/images/dark-bg.jpg)] m-auto px-[20px] md:px-[110px] pb-[150px] pt-[100px]"
+  >
+    <div
+      class="relative xl:flex justify-between items-center text-center m-auto"
+    >
       <BaseTheTitle
         text="Items Currently In The Market."
-        title=""
-        class="w-[100%] lg:w-[50%]"
+        title="Items"
+        :startChar="5"
+        :endChar="0"
+        class="w-[100%] lg:w-[100%] text-center lg:text-start pt-[40px] before:!lg:left-[4%]"
+        :centered="false"
       />
-      <li
-        class="font-medium cursor-pointer w-[110px] transition duration-100 text-center flex-nowrap text-base min-w-[14%] rounded-5 py-2 text-primary"
-      >
-        <nuxt-link class="nuxt-link-active text-white text-center">{{
-          first
-        }}</nuxt-link>
-      </li>
       <ul class="flex justify-center">
         <li
-          v-for="item in list"
-          class="mr-0 md:mr-7 font-medium cursor-pointer w-[110px] m-5 transition duration-100 text-center flex-nowrap text-base min-w-[14%] rounded-5 py-2 text-primary"
+          v-for="(item, index) in list"
+          class="mr-0 md:mr-1 font-medium cursor-pointer w-[100px] my-2 transition duration-100 text-center mt-7 flex-nowrap text-[15px] min-w-[14%] hover:rounded-5 py-2 hover:bg-primary"
+          :class="{ 'rounded-5 bg-primary': index === 0 }"
         >
-          <nuxt-link class="nuxt-link text-white">{{ item }}</nuxt-link>
+          <nuxt-link class="text-white">{{ item }}</nuxt-link>
         </li>
       </ul>
     </div>
@@ -52,7 +53,11 @@
                 <span>(July 24th, 2022)</span>
               </div>
             </div>
-            <nuxt-link class="text-primary"> View Item Details </nuxt-link>
+            <div class="mt-3">
+              <nuxt-link to="/" class="text-primary">
+                View Item Details
+              </nuxt-link>
+            </div>
           </div>
         </div>
       </div>
@@ -72,31 +77,10 @@ const list = ref([
   "Blockchain ",
   "Virtual",
 ]);
-let first = list.value.shift();
-console.log(list);
 onMounted(() => {
-  appStore.getItemsMarket()
+  appStore.getItemsMarket();
 });
 </script>
 
 <style scoped>
-.cat {
-  background-image: url("/images/dark-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
-  width: 100%;
-}
-.nuxt-link-active {
-  color: white;
-  background-color: #7453fc;
-  padding: 10px 15px;
-  border-radius: 50px;
-}
-.nuxt-link:hover {
-  color: white;
-  background-color: #7453fc;
-  padding: 10px 15px;
-  border-radius: 50px;
-}
 </style>

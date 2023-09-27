@@ -1,5 +1,7 @@
 <template>
-  <div class="wrapper px-[20px] md:px-[100px] pt-[180px]">
+  <div
+    class="bg-[url(/images/dark-bg.jpg)] bg-cover bg-no-repeat min-h-[100vh] relative px-[20px] md:px-[100px] pt-[180px]"
+  >
     <div class="md:flex justify-center sm:justify-between md:items-center">
       <div class="flex items-center justify-center pb-10 sm-pb-0 gap-x-9">
         <img src="images/single-author.jpg" class="rounded-full" />
@@ -25,17 +27,24 @@
         </div>
       </div>
     </div>
-    <BaseTheTitle
-      text="Melanie Smith’s Items."
-      title="abood"
-      class="pt-[100px]"
-    />
-    <div class="cards py-[100px]">
+    <div class="relative pt-[100px]">
+      <BaseTheTitle
+        text="Melanie Smith’s "
+        title="Items"
+        :startChar="15"
+        :endChar="15"
+        :centered="false"
+        class="before:!top-[70px] before:!left-[10%] before:!lg:left-[4%]"
+      />
       <div
-        v-for="author in authors.slice(0, 4)"
-        class="card relative text-white flex-col justify-center rounded-5 py-[40px] px-[30px] bg-light border-1 border-solid border-bocolor"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[20px] gap-y-[40px] xl:grid-cols-4 py-[100px]"
       >
-        <Card :element="author" />
+        <div
+          v-for="author in authors.slice(0, 4)"
+          class="card relative text-white flex-col justify-center rounded-5 py-[40px] px-[30px] bg-light border-1 border-solid border-bocolor"
+        >
+          <Card :element="author" />
+        </div>
       </div>
     </div>
   </div>
@@ -58,15 +67,6 @@ const actions = [
 </script>
 
 <style scoped>
-.wrapper {
-  background-image: url("/images/dark-bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-}
 .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 40px 20px;
 }
 </style>

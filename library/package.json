@@ -17,6 +17,7 @@
     "@pinia/nuxt": "^0.4.11",
     "nuxt-icon": "^0.4.1",
     "nuxt-swiper": "^1.1.0",
+    "sass": "^1.68.0",
     "vue-awesome-swiper": "^5.0.1"
   }
 }

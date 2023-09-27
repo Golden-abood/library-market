@@ -1,10 +1,15 @@
 <template>
-  <div class="cat relative">
+  <div
+    class="bg-[url(/images/dark-bg.jpg)] bg-no-repeat relative bg-cover min-h-[100vh] w-[100%] mx-auto px-[15px] relative"
+  >
     <div class="wrapper-swiper">
       <swiper
         :modules="modules"
-        :loop="true"
-        navigation
+        :navigation="{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }"
+        :speed="500"
         :autoplay="{
           delay: 2500,
         }"
@@ -28,16 +33,28 @@
         <swiper-slide v-for="item in explore">
           <img :src="item.featured" class="rounded-5 max-w-[95%]" />
         </swiper-slide>
+
+        <div>
+          <span
+            class="swiper-button-prev text-primary bg-white p-[20px] font-bold rounded-full m-auto after:text-[13px]"
+          ></span>
+          <span
+            class="swiper-button-next text-primary bg-white p-[20px] font-bold rounded-full m-auto after:text-[13px]"
+          ></span>
+        </div>
       </swiper>
     </div>
     <div>
       <div
-        class="lg:flex justify-between items-center m-auto lg:pl-[100px] lg:pr-[100px] pb-[100px]"
+        class="lg:flex relative justify-between items-center m-auto lg:pl-[100px] lg:pr-[100px] pb-[100px]"
       >
         <BaseTheTitle
-          text="Discover Some Of Our Items."
-          title=""
-          class="mb-4 lg:mb-0 text-center lg:text-left"
+          text="Discover Some Of Our "
+          title="Items"
+          :startChar="20"
+          :endChar="20"
+          :centered="false"
+          class="mb-4 lg:mb-0 text-center lg:text-left before:!top-[-20px]"
         />
         <div class="lg:flex items-center lg:gap-x-12">
           <input
@@ -68,7 +85,9 @@
           <BaseTheButton text="Search" :back="false" class="text-center" />
         </div>
       </div>
-      <div class="cards pb-[200px] lg:px-[100px]">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-[20px] gap-y-[40px] pb-[200px] lg:px-[100px]"
+      >
         <div
           v-for="author in authors"
           class="card relative text-white flex-col justify-center rounded-5 py-[40px] px-[30px] bg-light border-1 border-solid border-bocolor"
@@ -87,10 +106,10 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import { useAppStore } from "../../stores/app";
 const appStore = useAppStore();
 const { explore, authors } = storeToRefs(appStore);
-onMounted(()=> {
-  appStore.getAuthors()
-  appStore.getExplore()
-})
+onMounted(() => {
+  appStore.getAuthors();
+  appStore.getExplore();
+});
 const actions = [
   "material-symbols:favorite-rounded",
   "material-symbols:back-hand",
@@ -112,35 +131,6 @@ const modules = [Navigation, Autoplay];
 </script>
 
 <style scoped>
-.cat {
-  background-image: url("/images/dark-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.box {
-  border: 1px solid rgba(64, 66, 69, 0.9);
-  background-color: rgba(40, 43, 47, 0.9);
-  transition: 0.5s;
-}
-.boxs:hover .box {
-  left: 40%;
-}
-.swiper-button-prev,
-.swiper-button-next {
-  background-color: white !important;
-  padding: 20px;
-  border-radius: 50%;
-  color: red !important;
-}
 .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 40px 20px;
 }
 </style>

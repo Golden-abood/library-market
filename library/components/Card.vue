@@ -11,7 +11,7 @@
   >
     {{ props.element.title }}
   </h3>
-  <div class="flex pt-[30px] pb-5 justify-between px-[10px]">
+  <div class="flex pt-[30px] justify-between px-[10px]">
     <div class="left">
       <p class="mb-2">Current Bid :</p>
       <h4>{{ props.element.current }}</h4>
@@ -24,7 +24,7 @@
   <BaseTheButton
     text="View Details"
     :back="false"
-    class="w-[50%] absolute bottom-[-20px] left-[25%] text-center"
+    class="w-[60%] absolute bottom-[-55px] left-0 mx-auto text-center"
   />
 </template>
 

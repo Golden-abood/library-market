@@ -1,22 +1,6 @@
 <template>
   <div>
-    <div
-      v-if="!loading"
-      class="bg-[#000] h-screen w-full flex justify-center items-center relative top-[50%]"
-    >
-      <span
-        class="bg-primary p-3 ml-4 rounded-full absolute left-[47%] translate-x-[-50%] one"
-      ></span>
-      <span
-        class="bg-primary p-3 ml-4 rounded-full absolute left-[50%] translate-x-[-50%] two"
-      ></span>
-      <span
-        class="bg-primary p-3 ml-4 rounded-full absolute left-[53%] translate-x-[-50%] three"
-      ></span>
-      <span
-        class="bg-primary p-3 ml-4 rounded-full absolute left-[56%] translate-x-[-50%] four"
-      ></span>
-    </div>
+    <BaseLoading v-if="!loading" />
     <div v-else>
       <Details
         name="Explore"
@@ -24,7 +8,7 @@
         text="DISCOVER SOME TOP ITEMS"
         :show-button="false"
       />
-      <ExploreDescoverItems />
+      <ExploreDescoverItems />  
       <ExploreTopSellers />
       <Footer />
     </div>

@@ -2,13 +2,15 @@
   <div class="relative">
     <BaseTheTitle
       class="pt-[150px]"
-      title=""
-      text="Explore Some Hot Collections In Market."
+      title="Collections"
+      :centered="true"
+      text="Explore Some Hot In Market."
+      :startChar="16"
+      :endChar="17"
     />
-    <div class="wrapper-swiper px-[20px] lg:px-[120px]">
+    <div class="px-[20px] lg:px-[120px]">
       <swiper
-        :loop="true"
-        :speed="1000"
+        :speed="300"
         :modules="modules"
         :slides-per-view="3"
         :space-between="20"
@@ -18,7 +20,7 @@
         }"
         :autoplay="{
           delay: 2500,
-          disableOnInteraction: true,
+          disableOnInteraction: false,
         }"
         :breakpoints="{
           320: {
@@ -38,9 +40,9 @@
       >
         <swiper-slide
           v-for="collection in collections"
-          class="pb-[100px] relative mt-[100px] text-white overflow-hidden bg-light rounded-6 border-sloid border-1 border-bocolor px-0"
+          class="pb-[50px] relative mt-[100px] text-white overflow-hidden bg-light rounded-6 border-sloid border-1 border-bocolor px-0"
         >
-          <div class="flex-col items-start relative">
+          <div class="flex-col items-start">
             <img
               :src="collection.photo"
               class="w-[100%] border-b-4 border-b-bocolor"
@@ -63,13 +65,17 @@
           </div>
           <BaseTheButton
             :back="false"
-            text="Explore Worldwide"
-            class="w-[80%] absolute bottom-[20px] left-[50%] translate-x-[-50%] z-[100]"
+            text="Explore World wide"
+            class="w-[80%] absolute bottom-[-30px] left-[50%] translate-x-[-50%] z-[100]"
           />
         </swiper-slide>
         <div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <span
+            class="swiper-button-prev text-primary bg-white p-[20px] font-bold rounded-full m-auto after:text-[13px]"
+          ></span>
+          <span
+            class="swiper-button-next text-primary bg-white p-[20px] font-bold rounded-full m-auto after:text-[13px]"
+          ></span>
         </div>
       </swiper>
     </div>
@@ -83,24 +89,11 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import { useAppStore } from "~/stores/app";
 const appStore = useAppStore();
 const { collections } = storeToRefs(appStore);
-onMounted(()=> {
-  appStore.getCollections()
-})
-const modules = [Navigation];
+onMounted(() => {
+  appStore.getCollections();
+});
+const modules = [Navigation, Autoplay];
 </script>
 
 <style scoped>
-.swiper-button-prev,
-.swiper-button-next {
-  color: #7453fc !important;
-  background-color: white;
-  padding: 20px;
-  font-weight: bold;
-  border-radius: 50%;
-  margin: auto;
-}
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 13px;
-}
 </style>

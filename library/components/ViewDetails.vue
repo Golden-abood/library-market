@@ -1,15 +1,26 @@
 <template>
-  <div :class="{cat : cat}" class="pb-[100px] text-white">
+  <div
+    :class="{
+      'bg-[url(/images/dark-bg.jpg)] bg-no-repeat bg-cover min-h-[100vh] w-[100%]':
+        cat,
+    }"
+    class="pb-[100px] relative text-white"
+  >
     <BaseTheTitle
-      text="View Details For Item Here."
-      title=""
+      text="View Details Here."
+      title="For Item"
+      :centered="true"
+      :startChar="12"
+      :endChar="12"
       class="pt-[150px] text-center"
     />
     <div class="lg:flex justify-center gap-x-[50px] items-center mt-[100px]">
       <div class="left max-w-[70%] lg:max-w-[50%] m-auto lg:m-0">
         <img src="/images/item-details-01.jpg" class="rounded-5 w-[100%]" />
       </div>
-      <div class="right max-w-[70%] lg:max-w-[30%] m-auto lg:m-0 pt-[20px] lg:pt-0">
+      <div
+        class="right max-w-[70%] lg:max-w-[30%] m-auto lg:m-0 pt-[20px] lg:pt-0"
+      >
         <h4 class="text-xl mb-[25px]">{{ props.title }}</h4>
         <div class="flex gap-x-4 w-[40%] items-center pb-[30px]">
           <img :src="props.photo" class="rounded-full w-[30%]" />
@@ -67,11 +78,4 @@ const props = defineProps({
 </script>
 
 <style scoped>
-.cat {
-  background-image: url("/images/dark-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
-  width: 100%;
-}
 </style>

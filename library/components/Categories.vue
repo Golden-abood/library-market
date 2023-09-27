@@ -1,10 +1,14 @@
 <template>
   <div class="cat relative text-center pb-[150px]">
     <BaseTheTitle
-      text="Browse Through Our Categories Here."
-      title=""
-      class="pt-[150px] active"
-    />
+      text="Browse Through Our Here."
+      title="Categories"
+      :centered="true"
+      class="pt-[150px]"
+      :endChar="18"
+      :startChar="18"
+    >
+    </BaseTheTitle>
     <div>
       <div class="wrapper">
         <div
@@ -37,61 +41,10 @@ import { storeToRefs } from "pinia";
 import { useAppStore } from "~/stores/app";
 const appStore = useAppStore();
 const { categories } = storeToRefs(appStore);
-onMounted(()=> {
-  appStore.getCategories()
-})
+onMounted(() => {
+  appStore.getCategories();
+});
 </script>
 
 <style scoped>
-.cat {
-  background-image: url("/images/dark-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
-  width: 100%;
-}
-.wrapper {
-  padding-left: 80px;
-  padding-right: 80px;
-  margin-left: auto;
-  margin-right: auto;
-}
-@media (max-width: 768px) {
-  .wrapper {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-h3 {
-  color: white;
-}
-.category {
-  counter-increment: category;
-}
-.active::before {
-  content: "" ;
-  position: absolute;
-  top: 120px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 7%;
-  height: 3px;
-  background-color: #7453fc;
-}
-.category::after {
-  content: "" ;
-  position: absolute;
-  top: 85%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: white;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  opacity: 0;
-  transition: 0.3s;
-}
-.category:hover::after {
-  opacity: 1;
-}
 </style>

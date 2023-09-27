@@ -1,44 +1,44 @@
 [
     {
-        "title" : "David Walker",
-        "photo" : "images/current-01.jpg",
-        "link" : "@davidwalker",
-        "bid" : "0.56 ETH",
-        "date" : "14/08/2022, 12:00"
+        "title": "David Walker",
+        "photo": "images/current-01.jpg",
+        "link": "@davidwalker",
+        "bid": "0.56 ETH",
+        "date": "14/08/2022, 12:00"
     },
     {
-        "title" : "David Walker",
-        "photo" : "images/current-02.jpg",
-        "link" : "@davidwalker",
-        "bid" : "0.87 ETH",
-        "date" : "17/01/2012, 20:00"
+        "title": "David Walker",    
+        "photo": "images/current-02.jpg",
+        "link": "@davidwalker",
+        "bid": "0.87 ETH",
+        "date": "17/01/2012, 20:00"
     },
     {
-        "title" : " Walker David",
-        "photo" : "images/current-03.jpg",
-        "link" : "@davidwalker",
-        "bid" : "0.76 ETH",
-        "date" : "30/02/2025, 10:00"
+        "title": " Walker David",
+        "photo": "images/current-03.jpg",
+        "link": "@davidwalker",
+        "bid": "0.76 ETH",
+        "date": "30/02/2025, 10:00"
     },
     {
-        "title" : "Golden Handler",
-        "photo" : "images/current-02.jpg",
-        "link" : "@davidwalker",
-        "bid" : "5.06 ETH",
-        "date" : "20/04/2021, 23:00"
+        "title": "Golden Handler",
+        "photo": "images/current-02.jpg",
+        "link": "@davidwalker",
+        "bid": "5.06 ETH",
+        "date": "20/04/2021, 23:00"
     },
     {
-        "title" : "Ossy Dhman",
-        "photo" : "images/current-04.jpg",
-        "link" : "@davidwalker",
-        "bid" : "5.26 ETH",
-        "date" : "12/03/2021, 20:00"
+        "title": "Ossy Dhman",
+        "photo": "images/current-04.jpg",
+        "link": "@davidwalker",
+        "bid": "5.26 ETH",
+        "date": "12/03/2021, 20:00"
     },
     {
-        "title" : "Hoshy Walker",
-        "photo" : "images/current-03.jpg",
-        "link" : "@davidwalker",
-        "bid" : "1.36 ETH",
-        "date" : "10/05/2014, 12:00"
+        "title": "Hoshy Walker",
+        "photo": "images/current-03.jpg",
+        "link": "@davidwalker",
+        "bid": "1.36 ETH",
+        "date": "10/05/2014, 12:00"
     }
 ]

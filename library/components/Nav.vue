@@ -21,27 +21,39 @@
         <li
           class="mr-0 md:mr-7 font-medium cursor-pointer w-[60px] transition duration-100 text-center flex-nowrap text-base min-w-[14%] rounded-5 py-2 text-primary"
         >
-          <nuxt-link to="/" class="nuxt-link-active text-black">Home</nuxt-link>
+          <nuxt-link
+            to="/"
+            class="nuxt-link-active transition duration-1000 text-black"
+            >Home</nuxt-link
+          >
         </li>
         <li
           class="mr-0 md:mr-7 font-medium cursor-pointer text-center flex-nowrap text-base w-[70px] transition duration-100 hover:rounded-5 min-w-[14%] hover:py-2"
         >
-          <nuxt-link class="nuxt-link" to="Explore">Explore</nuxt-link>
+          <nuxt-link class="nuxt-link transition duration-300" to="Explore"
+            >Explore</nuxt-link
+          >
         </li>
         <li
           class="mr-0 md:mr-7 font-medium cursor-pointer w-[110px] transition duration-100 text-center flex-nowrap text-base hover:rounded-5 min-w-[23%] hover:py-2"
         >
-          <nuxt-link class="nuxt-link" to="ItemDetails">Item Details</nuxt-link>
+          <nuxt-link class="nuxt-link transition duration-300" to="ItemDetails"
+            >Item Details</nuxt-link
+          >
         </li>
         <li
           class="mr-0 md:mr-7 font-medium cursor-pointer w-[60px] transition duration-100 text-center flex-nowrap text-base hover:rounded-5 min-w-[14%] hover:py-2"
         >
-          <nuxt-link class="nuxt-link" to="Author">Author</nuxt-link>
+          <nuxt-link class="nuxt-link transition duration-300" to="Author"
+            >Author</nuxt-link
+          >
         </li>
         <li
           class="mr-0 md:mr-7 font-medium cursor-pointer w-[110px] transition duration-100 text-center flex-nowrap text-base hover:rounded-5 min-w-[23%] hover:py-2"
         >
-          <nuxt-link class="nuxt-link" to="CreateYours">Create Yours</nuxt-link>
+          <nuxt-link class="nuxt-link transition duration-300" to="CreateYours"
+            >Create Yours</nuxt-link
+          >
         </li>
       </ul>
     </client-only>
@@ -54,7 +66,6 @@ const show = ref(false);
 const showNav = function () {
   show.value = !show.value;
 };
-import { ref, onMounted, onUnmounted } from "vue";
 
 const isFixed = ref(false);
 
@@ -81,6 +92,7 @@ onUnmounted(() => {
   width: 100%;
   margin: 0 !important;
   border-radius: 0;
+  transition: 0.5s;
 }
 @media (min-width: 992px) {
   .fixed {
