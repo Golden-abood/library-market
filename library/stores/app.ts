@@ -33,7 +33,7 @@ export const useAppStore = defineStore("app", () => {
   const create = ref([]);
   const itemsMarket = ref([]);
   const explore = ref([]);
-  const boxs = ref([]);
+  const sellers = ref([]);
   // Authours
   const getAuthors = async function () {
     const res = await fetch("http://localhost:3000/authors");
@@ -69,10 +69,10 @@ export const useAppStore = defineStore("app", () => {
     const data = await res.json();
     explore.value = data;
   };
-  const getBoxs = async function () {
-    const res = await fetch("http://localhost:3000/boxs");
+  const getsellers = async function () {
+    const res = await fetch("http://localhost:3000/sellers");
     const data = await res.json();
-    boxs.value = data;
+    sellers.value = data;
   };
   return {
     authors,
@@ -81,13 +81,13 @@ export const useAppStore = defineStore("app", () => {
     collections,
     create,
     itemsMarket,
-    boxs,
+    sellers,
     getAuthors,
     getCreate,
     getCollections,
     getCategories,
     getItemsMarket,
     getExplore,
-    getBoxs
+    getsellers,
   };
 });

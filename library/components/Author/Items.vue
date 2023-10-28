@@ -51,13 +51,8 @@
 </template>
 
 <script setup lang="ts">
-import { useAppStore } from "~/stores/app";
-import { storeToRefs } from "pinia";
-const appStore = useAppStore();
-const { authors } = storeToRefs(appStore);
-
-onMounted(() => {
-  appStore.getAuthors();
+defineProps({
+  authors: { type: Object, required: true },
 });
 const actions = [
   "material-symbols:favorite-rounded",
@@ -66,7 +61,4 @@ const actions = [
 ];
 </script>
 
-<style scoped>
-.cards {
-}
-</style>
+<style scoped></style>

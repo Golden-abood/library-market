@@ -7,6 +7,7 @@
       text="Explore Some Hot In Market."
       :startChar="16"
       :endChar="17"
+      data-aos="zoom-in-down"
     />
     <div class="px-[20px] lg:px-[120px]">
       <swiper
@@ -95,5 +96,4 @@ onMounted(() => {
 const modules = [Navigation, Autoplay];
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

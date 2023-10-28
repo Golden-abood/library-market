@@ -11,7 +11,7 @@
     <div
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-[20px] gap-y-[30px] pt-[70px] lg:px-[100px] text-white pb-[20px]"
     >
-      <div class="box flex gap-x-3 items-center m-auto" v-for="box in boxs">
+      <div class="box flex gap-x-3 items-center m-auto" v-for="box in sellers">
         <img :src="box.icon" class="rounded-full w-[60px]" />
         <div>
           <h4 class="text-lg mb-2">{{ box.name }}</h4>
@@ -23,12 +23,8 @@
 </template>
 
 <script setup>
-import { storeToRefs } from "pinia";
-import { useAppStore } from "~/stores/app";
-const appStore = useAppStore();
-const { boxs } = storeToRefs(appStore);
-onMounted(() => {
-  appStore.getBoxs();
+defineProps({
+  sellers: { type: Array, required: true },
 });
 </script>
 

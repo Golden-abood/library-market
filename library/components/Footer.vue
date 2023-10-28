@@ -1,6 +1,6 @@
 <template>
   <div class="footer text-white text-center p-7">
-    <h4 class="text-base font-normal leading-9">
+    <h4 class="text-base font-normal leading-9" data-aos="zoom-in-up">
       Copyright © 2022 Liberty NFT Marketplace Co., Ltd. All rights reserved.
       Designed by Golden abood
     </h4>

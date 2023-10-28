@@ -6,23 +6,32 @@
         text="Create Your NFT & Put It On The Market."
         title="create"
         :centered="false"
+        data-aos="zoom-in-right"
       />
       <BaseTheButton
         text="Create Your NFT Now"
         :back="false"
         class="mt-10 lg:mt-0 w-[60%] lg:w-[18%] m-auto lg:m-0"
+        data-aos="zoom-in-left"
       />
     </div>
     <div
       class="grid grid-cols-1 xl:grid-cols-3 gap-x-[60px] gap-y-[30px] pt-[50px] lg:pt-[150px] pb[80px] xl:pb-[120px]"
     >
       <div
-        v-for="abood in create"
+        v-for="(item, index) in create"
         class="step relative text-white text-center lg:text-left"
+        :data-aos="
+          index === 0
+            ? 'zoom-in-right'
+            : index === 2
+            ? 'zoom-in-left'
+            : 'zoom-in-down'
+        "
       >
-        <img :src="abood.icon" class="bg-white p-3 mb-[30px] rounded-full" />
-        <h3 class="font-bold text-xl pb-[20px]">{{ abood.title }}</h3>
-        <p class="leading-8 text-base">{{ abood.text }}</p>
+        <img :src="item.icon" class="bg-white p-3 mb-[30px] rounded-full" />
+        <h3 class="font-bold text-xl pb-[20px]">{{ item.title }}</h3>
+        <p class="leading-8 text-base">{{ item.text }}</p>
       </div>
     </div>
   </div>

@@ -1,11 +1,13 @@
 <template>
   <div
+    data-aos="zoom-in-down"
     :class="{ fixed: isFixed }"
     class="relative flex justify-between items-center bg-white ml-0 w-[100%] lg:w-[85%] lg:ml-[110px] mr-[110px] px-[30px] py-[15px] sm:mt-0 rounded-0 lg:rounded-12 z-[10000]"
   >
     <img src="/images/logo.png" />
     <div
       @click="showNav()"
+      data-aos="zoom-in-down"
       :class="{ abood: show }"
       class="burger-icon relative w-[4%] right-[30px] top-[-10px] lg:hidden"
     >

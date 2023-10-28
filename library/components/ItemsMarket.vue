@@ -12,8 +12,9 @@
         :endChar="0"
         class="w-[100%] lg:w-[100%] text-center lg:text-start pt-[40px] before:!lg:left-[4%]"
         :centered="false"
+        data-aos="zoom-in-right"
       />
-      <ul class="flex justify-center">
+      <ul class="flex justify-center" data-aos="zoom-in-left">
         <li
           v-for="(item, index) in list"
           class="mr-0 md:mr-1 font-medium cursor-pointer w-[100px] my-2 transition duration-100 text-center mt-7 flex-nowrap text-[15px] min-w-[14%] hover:rounded-5 py-2 hover:bg-primary"
@@ -25,7 +26,7 @@
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-[100px] md:mr-[100px]">
-      <div v-for="item in itemsMarket">
+      <div v-for="item in items" data-aos="zoom-in-down">
         <div
           class="flex gap-x-8 bg-light p-[40px] rounded-6 border-solid border-1 border-bocolor"
         >
@@ -66,10 +67,9 @@
 </template>
 
 <script setup lang="ts">
-import { storeToRefs } from "pinia";
-import { useAppStore } from "~/stores/app";
-const appStore = useAppStore();
-const { itemsMarket } = storeToRefs(appStore);
+defineProps({
+  items: { type: Array, required: true },
+});
 const list = ref([
   "All Items",
   "Music Art",
@@ -77,10 +77,6 @@ const list = ref([
   "Blockchain ",
   "Virtual",
 ]);
-onMounted(() => {
-  appStore.getItemsMarket();
-});
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

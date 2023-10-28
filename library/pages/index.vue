@@ -9,21 +9,29 @@
 
         <Landing />
       </div>
-      <Categories />
+      <Categories :categories="categories" />
       <Create />
-      <ItemsMarket />
+      <ItemsMarket :items="itemsMarket" />
       <Footer />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { storeToRefs } from "pinia";
+import { useAppStore } from "~/stores/app";
 const loading = ref(false);
-onBeforeMount(() => {
-  setTimeout(() => {
+
+const appStore = useAppStore();
+const { categories, itemsMarket } = storeToRefs(appStore);
+onMounted(async () => {
+  setTimeout(async () => {
     loading.value = true;
-  }, 5000);
+    await appStore.getCategories();
+    await appStore.getItemsMarket();
+  }, 3000);
 });
+loading.value = false;
 </script>
 
 <style scoped></style>

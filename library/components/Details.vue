@@ -1,9 +1,9 @@
 <template>
   <div
-    class="bg-cover bg-no-repeat h-[85vh] bg-center bg-[url(/images/heading-bg.jpg)] pt-0 lg:pt-[30px]"
+    class="bg-cover bg-no-repeat h-[85vh] bg-center  bg-[url(/images/heading-bg.jpg)] pt-0 lg:pt-[30px]"
   >
     <Nav />
-    <div class="flex justify-center items-center">
+    <div class="flex justify-center items-center" data-aos="zoom-in-up">
       <div class="text-white text-center pt-[150px]">
         <p class="text-xl mb-[15px] font-medium tracking-wider">
           {{ props.title }}
@@ -34,5 +34,4 @@ const props = defineProps({
 });
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

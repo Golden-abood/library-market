@@ -13,10 +13,20 @@
       <div class="wrapper">
         <div
           class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-6 place-content-center gap-6 mt-[100px]"
+          data-aos="zoom-in-down"
         >
           <div
-            v-for="category in categories"
+            v-for="(category, index) in categories"
             :key="category.icon"
+            :data-aos="
+              index === 0
+                ? 'zoom-in-right'
+                : index === 1
+                ? 'zoom-in-right'
+                : index === 2
+                ? 'zoom-in-right'
+                : 'zoom-in-left'
+            "
             class="relative"
           >
             <div
@@ -37,14 +47,9 @@
 </template>
 
 <script setup lang="ts">
-import { storeToRefs } from "pinia";
-import { useAppStore } from "~/stores/app";
-const appStore = useAppStore();
-const { categories } = storeToRefs(appStore);
-onMounted(() => {
-  appStore.getCategories();
+defineProps({
+  categories: { type: Array, required: true },
 });
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

@@ -105,10 +105,12 @@ import { Navigation, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { useAppStore } from "../../stores/app";
 const appStore = useAppStore();
-const { explore, authors } = storeToRefs(appStore);
+const { explore } = storeToRefs(appStore);
 onMounted(() => {
-  appStore.getAuthors();
   appStore.getExplore();
+});
+defineProps({
+  authors: { type: Array, required: true },
 });
 const actions = [
   "material-symbols:favorite-rounded",
