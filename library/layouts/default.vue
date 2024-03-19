@@ -1,16 +1,23 @@
 <template>
-    <div class="bg-red-400">
-        <h1 class="text-base font-bold underline text-red-400">
-            Hello world
-        </h1>
-        <slot />
-    </div>
+  <div></div>
+  <slot />
 </template>
 
 <script setup lang="ts">
+import AOS from "aos";
 
+onMounted(() => {
+  AOS.init({
+    once: true,
+    offset: 50,
+    duration: 700,
+  });
+});
 </script>
 
-<style scoped>
-
+<style>
+*::selection {
+  background-color: #7453fc;
+  color: white;
+}
 </style>
