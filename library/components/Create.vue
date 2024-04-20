@@ -19,7 +19,7 @@
       class="grid grid-cols-1 xl:grid-cols-3 gap-x-[60px] gap-y-[30px] pt-[50px] lg:pt-[150px] pb[80px] xl:pb-[120px]"
     >
       <div
-        v-for="(item, index) in create"
+        v-for="(item, index) in items"
         class="step relative text-white text-center lg:text-left"
         :data-aos="
           index === 0
@@ -38,13 +38,23 @@
 </template>
 
 <script setup lang="ts">
-import { storeToRefs } from "pinia";
-import { useAppStore } from "~/stores/app";
-const appStore = useAppStore();
-const { create } = storeToRefs(appStore);
-onMounted(() => {
-  appStore.getCreate();
-});
+const items = [
+  {
+    icon: "images/icon-02.png",
+    text: "Lorem ipsum dolor sit amet, consectetu dipiscingei elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    title: "Set Up Your Wallet ",
+  },
+  {
+    icon: "images/icon-04.png",
+    text: "Lorem ipsum dolor sit amet, consectetu dipiscingei elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    title: "Add Your Digital NFT",
+  },
+  {
+    icon: "images/icon-06.png",
+    text: "Lorem ipsum dolor sit amet, consectetu dipiscingei elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    title: "Sell Your NFT & Make Profit",
+  },
+];
 </script>
 
 <style scoped>

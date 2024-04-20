@@ -1,0 +1,22 @@
+[
+    {
+        "AuthorPhoto": "images/author.jpg",
+        "featured": "images/featured-03.jpg",
+        "name": "Bored Ape Club"
+    },
+    {
+        "AuthorPhoto": "images/author-02.jpg",
+        "featured": "images/featured-01.jpg",
+        "name": "Bored Ape Club"
+    },
+    {
+        "AuthorPhoto": "images/author.jpg",
+        "featured": "images/featured-02.jpg",
+        "name": "Bored Ape Club"
+    },
+    {
+        "AuthorPhoto": "images/author-03.jpg",
+        "featured": "images/featured-04.jpg",
+        "name": "Bored Ape Club"
+    }
+]

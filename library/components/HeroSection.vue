@@ -32,7 +32,6 @@
         :modules="modules"
         :autoplay="{
           delay: 2500,
-          disableOnInteraction: false,
         }"
         :slides-per-view="1"
         :space-between="0"

@@ -1,6 +1,7 @@
 <template>
   <div>
     <BaseLoading v-if="!loading" />
+
     <div v-else>
       <Details
         name="Explore"
@@ -8,7 +9,7 @@
         text="DISCOVER SOME TOP ITEMS"
         :show-button="false"
       />
-      <ExploreDescoverItems :authors="authors" />
+      <ExploreDescoverItems :authors="data?.authors" />
       <ExploreTopSellers :sellers="sellers" />
       <Footer />
     </div>
@@ -16,17 +17,75 @@
 </template>
 
 <script setup lang="ts">
-import { storeToRefs } from "pinia";
-import { useAppStore } from "~/stores/app";
 const loading = ref(false);
 
-const appStore = useAppStore();
-const { sellers, authors } = storeToRefs(appStore);
+const { data } = await useFetch("/api/authors");
+
+const sellers = [
+  {
+    name: "NFT Top Artist",
+    desc: "8.6 ETH or $12,000",
+    icon: "images/author.jpg",
+  },
+  {
+    name: "George Brandon",
+    desc: "4.8 ETH or $14,000",
+    icon: "images/author-02.jpg",
+  },
+  {
+    name: "Johnny Mayson",
+    desc: "6.2 ETH or $26,000",
+    icon: "images/author-03.jpg",
+  },
+  {
+    name: "Liberty Artist",
+    desc: "4.5 ETH or $11,600",
+    icon: "images/author-02.jpg",
+  },
+  {
+    name: "Ronald Martino",
+    desc: "7.2 ETH or $14,500",
+    icon: "images/author-02.jpg",
+  },
+  {
+    name: "Anthony Brown",
+    desc: "8.6 ETH or $7,400",
+    icon: "images/author-03.jpg",
+  },
+  {
+    name: "NFT Top Artist",
+    desc: "8.6 ETH or $12,000",
+    icon: "images/author.jpg",
+  },
+  {
+    name: "Ronald Martino",
+    desc: "6.5 ETH or $11,000",
+    icon: "images/author-02.jpg",
+  },
+  {
+    name: "David Walker",
+    desc: "2.5 ETH or $12,000",
+    icon: "images/author-03.jpg",
+  },
+  {
+    name: "NFT Top Artist",
+    desc: "8.6 ETH or $12,000",
+    icon: "images/author.jpg",
+  },
+  {
+    name: "Ronald Martino",
+    desc: "6.5 ETH or $11,000",
+    icon: "images/author-02.jpg",
+  },
+  {
+    name: "David Walker",
+    desc: "2.5 ETH or $12,000",
+    icon: "images/author-03.jpg",
+  },
+];
 onMounted(async () => {
   setTimeout(async () => {
     loading.value = true;
-    await appStore.getsellers();
-    await appStore.getAuthors();
   }, 3000);
 });
 loading.value = false;

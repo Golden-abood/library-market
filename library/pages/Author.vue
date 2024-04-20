@@ -8,7 +8,7 @@
         title="Author Details"
         :showButton="true"
       />
-      <AuthorItems :authors="authors" />
+      <AuthorItems :authors="data?.authors" />
       <Create />
       <Footer />
     </div>
@@ -16,16 +16,13 @@
 </template>
 
 <script setup lang="ts">
-import { storeToRefs } from "pinia";
-import { useAppStore } from "~/stores/app";
 const loading = ref(false);
 
-const appStore = useAppStore();
-const { authors } = storeToRefs(appStore);
+const { data } = await useFetch("/api/authors");
+
 onMounted(async () => {
   setTimeout(async () => {
     loading.value = true;
-    await appStore.getAuthors();
   }, 3000);
 });
 loading.value = false;

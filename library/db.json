@@ -83,7 +83,7 @@
             "photo": "/images/collection-01.jpg"
         }
     ],
-    "create": [
+    "items": [
         {
             "icon": "images/icon-02.png",
             "text": "Lorem ipsum dolor sit amet, consectetu dipiscingei elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
