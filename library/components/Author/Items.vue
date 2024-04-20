@@ -4,7 +4,7 @@
   >
     <div class="md:flex justify-center sm:justify-between md:items-center">
       <div class="flex items-center justify-center pb-10 sm-pb-0 gap-x-9">
-        <img src="images/single-author.jpg" class="rounded-full" />
+        <img src="../../public/images/single-author.jpg" class="rounded-full" />
         <div>
           <h4 class="text-white font-bold text-xl">Melanie Smith</h4>
           <p class="text-primary text-[15px] font-bold">@melanie32</p>
