@@ -7,7 +7,6 @@
     <img src="/images/logo.png" />
     <div
       @click="showNav()"
-      data-aos="zoom-in-down"
       :class="{ abood: show }"
       class="burger-icon relative w-[4%] right-[30px] top-[-10px] lg:hidden"
     >
@@ -15,50 +14,45 @@
       <span class="bg-primary"></span>
       <span class="bg-primary"></span>
     </div>
-    <client-only>
-      <ul
-        id="nav"
-        class="hidden lg:flex items-center justify-center gap-x-[0px]"
+    <ul id="nav" class="hidden lg:flex items-center justify-center gap-x-[0px]">
+      <li
+        class="mr-0 md:mr-7 font-medium cursor-pointer w-[60px] transition duration-100 text-center flex-nowrap text-base min-w-[14%] rounded-5 py-2 text-primary"
       >
-        <li
-          class="mr-0 md:mr-7 font-medium cursor-pointer w-[60px] transition duration-100 text-center flex-nowrap text-base min-w-[14%] rounded-5 py-2 text-primary"
+        <nuxt-link
+          to="/"
+          class="nuxt-link-active transition duration-1000 text-black"
+          >Home</nuxt-link
         >
-          <nuxt-link
-            to="/"
-            class="nuxt-link-active transition duration-1000 text-black"
-            >Home</nuxt-link
-          >
-        </li>
-        <li
-          class="mr-0 md:mr-7 font-medium cursor-pointer text-center flex-nowrap text-base w-[70px] transition duration-100 hover:rounded-5 min-w-[14%] hover:py-2"
+      </li>
+      <li
+        class="mr-0 md:mr-7 font-medium cursor-pointer text-center flex-nowrap text-base w-[70px] transition duration-100 hover:rounded-5 min-w-[14%] hover:py-2"
+      >
+        <nuxt-link class="nuxt-link transition duration-300" to="Explore"
+          >Explore</nuxt-link
         >
-          <nuxt-link class="nuxt-link transition duration-300" to="Explore"
-            >Explore</nuxt-link
-          >
-        </li>
-        <li
-          class="mr-0 md:mr-7 font-medium cursor-pointer w-[110px] transition duration-100 text-center flex-nowrap text-base hover:rounded-5 min-w-[23%] hover:py-2"
+      </li>
+      <li
+        class="mr-0 md:mr-7 font-medium cursor-pointer w-[110px] transition duration-100 text-center flex-nowrap text-base hover:rounded-5 min-w-[23%] hover:py-2"
+      >
+        <nuxt-link class="nuxt-link transition duration-300" to="ItemDetails"
+          >Item Details</nuxt-link
         >
-          <nuxt-link class="nuxt-link transition duration-300" to="ItemDetails"
-            >Item Details</nuxt-link
-          >
-        </li>
-        <li
-          class="mr-0 md:mr-7 font-medium cursor-pointer w-[60px] transition duration-100 text-center flex-nowrap text-base hover:rounded-5 min-w-[14%] hover:py-2"
+      </li>
+      <li
+        class="mr-0 md:mr-7 font-medium cursor-pointer w-[60px] transition duration-100 text-center flex-nowrap text-base hover:rounded-5 min-w-[14%] hover:py-2"
+      >
+        <nuxt-link class="nuxt-link transition duration-300" to="Author"
+          >Author</nuxt-link
         >
-          <nuxt-link class="nuxt-link transition duration-300" to="Author"
-            >Author</nuxt-link
-          >
-        </li>
-        <li
-          class="mr-0 md:mr-7 font-medium cursor-pointer w-[110px] transition duration-100 text-center flex-nowrap text-base hover:rounded-5 min-w-[23%] hover:py-2"
+      </li>
+      <li
+        class="mr-0 md:mr-7 font-medium cursor-pointer w-[110px] transition duration-100 text-center flex-nowrap text-base hover:rounded-5 min-w-[23%] hover:py-2"
+      >
+        <nuxt-link class="nuxt-link transition duration-300" to="CreateYours"
+          >Create Yours</nuxt-link
         >
-          <nuxt-link class="nuxt-link transition duration-300" to="CreateYours"
-            >Create Yours</nuxt-link
-          >
-        </li>
-      </ul>
-    </client-only>
+      </li>
+    </ul>
   </div>
 </template>
 

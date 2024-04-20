@@ -19,8 +19,9 @@
           v-for="(item, index) in list"
           class="mr-0 md:mr-1 font-medium cursor-pointer w-[100px] my-2 transition duration-100 text-center mt-7 flex-nowrap text-[15px] min-w-[14%] hover:rounded-5 py-2 hover:bg-primary"
           :class="{ 'rounded-5 bg-primary': index === 0 }"
+          @click=""
         >
-          <nuxt-link class="text-white">{{ item }}</nuxt-link>
+          <nuxt-link class="text-white">{{ item.title }}</nuxt-link>
         </li>
       </ul>
     </div>
@@ -71,11 +72,25 @@ defineProps({
   items: { type: Array, required: true },
 });
 const list = ref([
-  "All Items",
-  "Music Art",
-  "Digital Art",
-  "Blockchain ",
-  "Virtual",
+  {
+    title: "All Items",
+  },
+  {
+    title: "Music Art",
+    category: "music",
+  },
+  {
+    title: "Digital Art",
+    category: "digital",
+  },
+  {
+    title: "Blockchain",
+    category: "blockchain",
+  },
+  {
+    title: "Virtual",
+    category: "virtual",
+  },
 ]);
 </script>
 

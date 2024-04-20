@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-cover bg-no-repeat h-[85vh] bg-center  bg-[url(/images/heading-bg.jpg)] pt-0 lg:pt-[30px]"
+    class="bg-cover bg-no-repeat h-[85vh] bg-center bg-[url(/images/heading-bg.jpg)] pt-0 lg:pt-[30px]"
   >
     <Nav />
     <div class="flex justify-center items-center" data-aos="zoom-in-up">

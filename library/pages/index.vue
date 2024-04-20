@@ -7,28 +7,49 @@
       >
         <Nav />
 
-        <Landing />
+        <HeroSection />
       </div>
       <Categories :categories="categories" />
       <Create />
-      <ItemsMarket :items="itemsMarket" />
+      <ItemsMarket :items="data?.itemsMarket" />
       <Footer />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { storeToRefs } from "pinia";
-import { useAppStore } from "~/stores/app";
 const loading = ref(false);
 
-const appStore = useAppStore();
-const { categories, itemsMarket } = storeToRefs(appStore);
+const categories = [
+  {
+    icon: "images/icon-01.png",
+    text: "Blockchain",
+  },
+  {
+    icon: "images/icon-02.png",
+    text: "Digital Art",
+  },
+  {
+    icon: "images/icon-03.png",
+    text: "Digital Art",
+  },
+  {
+    icon: "images/icon-04.png",
+    text: "Virtual World",
+  },
+  {
+    icon: "images/icon-05.png",
+    text: "Valuable",
+  },
+  {
+    icon: "images/icon-06.png",
+    text: "Triple NFT",
+  },
+];
+const { data } = await useFetch("/api/itemsMarket");
 onMounted(async () => {
   setTimeout(async () => {
     loading.value = true;
-    await appStore.getCategories();
-    await appStore.getItemsMarket();
   }, 3000);
 });
 loading.value = false;

@@ -30,7 +30,7 @@
         }"
         class="relative top-[-140px]"
       >
-        <swiper-slide v-for="item in explore">
+        <swiper-slide v-for="item in items">
           <img :src="item.featured" class="rounded-5 max-w-[95%]" />
         </swiper-slide>
 
@@ -105,7 +105,28 @@ import { Navigation, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { useAppStore } from "../../stores/app";
 const appStore = useAppStore();
-const { explore } = storeToRefs(appStore);
+const items = [
+  {
+    AuthorPhoto: "images/author.jpg",
+    featured: "images/featured-03.jpg",
+    name: "Bored Ape Club",
+  },
+  {
+    AuthorPhoto: "images/author-02.jpg",
+    featured: "images/featured-01.jpg",
+    name: "Bored Ape Club",
+  },
+  {
+    AuthorPhoto: "images/author.jpg",
+    featured: "images/featured-02.jpg",
+    name: "Bored Ape Club",
+  },
+  {
+    AuthorPhoto: "images/author-03.jpg",
+    featured: "images/featured-04.jpg",
+    name: "Bored Ape Club",
+  },
+];
 onMounted(() => {
   appStore.getExplore();
 });

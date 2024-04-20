@@ -21,7 +21,6 @@
         }"
         :autoplay="{
           delay: 2500,
-          disableOnInteraction: false,
         }"
         :breakpoints="{
           320: {
@@ -84,16 +83,36 @@
 </template>
 
 <script setup lang="ts">
-import { storeToRefs } from "pinia";
 import { Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { useAppStore } from "~/stores/app";
-const appStore = useAppStore();
-const { collections } = storeToRefs(appStore);
-onMounted(() => {
-  appStore.getCollections();
-});
 const modules = [Navigation, Autoplay];
+
+const collections = [
+  {
+    title: "Genesis Collective Statue",
+    category: "Music Art",
+    items: "530/890",
+    photo: "/images/collection-01.jpg",
+  },
+  {
+    title: "Bored Ape Kennel Club",
+    category: "Visual Art",
+    items: "320/490",
+    photo: "/images/collection-01.jpg",
+  },
+  {
+    title: "Mutant Bored Ape Yacht Club",
+    category: "Blockchain",
+    items: "620/910",
+    photo: "/images/collection-01.jpg",
+  },
+  {
+    title: "Bored Collective Statue",
+    category: "Digital Crypto",
+    items: "150/562",
+    photo: "/images/collection-01.jpg",
+  },
+];
 </script>
 
 <style scoped></style>
