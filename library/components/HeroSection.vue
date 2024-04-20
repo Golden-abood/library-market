@@ -53,10 +53,10 @@
           class="!bg-primary flex justify-between items-center relative top-[-130px] lg:top-[-140px] xl:top-[-50px] mx-[150px] mx-[100px] md:mx-[160px] xl:mx-[250px]"
         >
           <span
-            class="swiper-button-next text-primary bg-white rounded-full p-[20px] after:text-[12px] after:font-[600]"
+            class="swiper-button-next text-primary bg-white rounded-full p-[20px] !after:text-[12px] !after:font-[600]"
           ></span>
           <span
-            class="swiper-button-prev text-primary bg-white rounded-full p-[20px] after:text-[12px] after:font-[600]"
+            class="swiper-button-prev text-primary bg-white rounded-full p-[20px] !after:text-[12px] !after:font-[600]"
           ></span>
         </div>
       </swiper>

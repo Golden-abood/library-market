@@ -71,10 +71,10 @@
         </swiper-slide>
         <div>
           <span
-            class="swiper-button-prev text-primary bg-white p-[20px] font-bold rounded-full m-auto after:text-[13px]"
+            class="swiper-button-prev text-primary bg-white p-[20px] !font-bold rounded-full m-auto !after:text-[13px]"
           ></span>
           <span
-            class="swiper-button-next text-primary bg-white p-[20px] font-bold rounded-full m-auto after:text-[13px]"
+            class="swiper-button-next text-primary bg-white p-[20px] !font-bold rounded-full m-auto !after:text-[13px]"
           ></span>
         </div>
       </swiper>
