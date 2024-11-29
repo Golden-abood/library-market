@@ -9,7 +9,7 @@
         text="DISCOVER SOME TOP ITEMS"
         :show-button="false"
       />
-      <ExploreDescoverItems :authors="data?.authors" />
+      <ExploreDescoverItems :authors="data?.authors!!" />
       <ExploreTopSellers :sellers="sellers" />
       <Footer />
     </div>

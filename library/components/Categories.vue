@@ -47,8 +47,11 @@
 </template>
 
 <script setup lang="ts">
+import { PropType } from "nuxt/dist/app/compat/capi";
+import { Category } from "~/types";
+
 defineProps({
-  categories: { type: Array, required: true },
+  categories: { type: Array as PropType<Category[]>, required: true },
 });
 </script>
 

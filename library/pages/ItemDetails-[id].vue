@@ -9,12 +9,7 @@
         text="VIEW ITEM DETAILS"
         name="Item Details"
       />
-      <ViewDetails
-        title="Dolores Haze Westworld Eye"
-        owner="Golden Abood"
-        photo="/images/author-02.jpg"
-        :cat="true"
-      />
+      <ViewDetails :cat="true" />
       <Create />
       <Footer />
     </div>

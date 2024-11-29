@@ -43,7 +43,7 @@
           v-for="author in authors.slice(0, 4)"
           class="card relative text-white flex-col justify-center rounded-5 py-[40px] px-[30px] bg-light border-1 border-solid border-bocolor"
         >
-          <Card :element="author" />
+          <Card :author="author" />
         </div>
       </div>
     </div>
@@ -51,8 +51,10 @@
 </template>
 
 <script setup lang="ts">
+import { Author } from "~/types";
+
 defineProps({
-  authors: { type: Object, required: true },
+  authors: { type: Array as PropType<Author[]>, required: true },
 });
 const actions = [
   "material-symbols:favorite-rounded",
