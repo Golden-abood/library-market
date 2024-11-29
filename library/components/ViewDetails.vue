@@ -26,12 +26,14 @@
         class="right max-w-[70%] lg:max-w-[30%] m-auto lg:m-0 pt-[20px] lg:pt-0"
         data-aos="zoom-in-left"
       >
-        <h4 class="text-xl mb-[25px]">{{ props.title }}</h4>
+        <h4 class="text-xl mb-[25px]">{{ data.item.title }}</h4>
         <div class="flex gap-x-4 w-[40%] items-center pb-[30px]">
-          <img :src="props.photo" class="rounded-full w-[30%]" />
+          <img :src="data.item.avatar" class="rounded-full w-[30%]" />
           <div class="leading-5">
-            <h6 class="text-base font-normal">Liberty Artist</h6>
-            <nuxt-link class="font-bold text-primary">@libertyart</nuxt-link>
+            <h6 class="text-base font-normal">{{ data.item.username }}</h6>
+            <nuxt-link class="font-bold text-primary">{{
+              data.item.email
+            }}</nuxt-link>
           </div>
         </div>
         <div class="text-base leading-8">
@@ -41,25 +43,25 @@
         <div class="flex justify-between items-center pt-[40px] pb-[40px]">
           <div class="flex-col text-base">
             <p class="mb-[10px]">Current Bid</p>
-            <h3 class="text-primary mb-[10px]">6.06 ETH</h3>
-            <span class="text-lighten">($8,025.50)</span>
+            <h3 class="text-primary mb-[10px]">{{ data.item.current }}</h3>
+            <span class="text-lighten">{{ data.item.sa }}</span>
           </div>
           <div class="flex-col text-base">
             <p class="mb-[10px]">Owner</p>
-            <h3 class="text-primary mb-[10px]">{{ props.owner }}</h3>
-            <span class="text-lighten">(@davidwalker)</span>
+            <h3 class="text-primary mb-[10px]">{{ data.item.username }}</h3>
+            <span class="text-lighten">{{ data.item.email }}</span>
           </div>
           <div class="flex-col text-base">
             <p class="mb-[10px]">Ends In</p>
-            <h3 class="text-primary mb-[10px]">3D 05H 20M 58S</h3>
-            <span class="text-lighten">(January 22nd, 2021)</span>
+            <h3 class="text-primary mb-[10px]">{{ data.item.end }}</h3>
+            <span class="text-lighten">{{ data.item.date }}</span>
           </div>
         </div>
         <div class="flex justify-between w-[75%] items-center">
           <span class="text-lighten">Place Bid:</span>
           <input
             type="text"
-            value="1 ETH"
+            :value="data.item.current"
             class="rounded-8 w-[100px] h-[50px] bg-transparent border-primary outline-0 text-center font-normal text-lg text-white"
           />
           <BaseTheButton text="Submit Now" :back="false" />
@@ -74,12 +76,12 @@
 
 <script setup lang="ts">
 const props = defineProps({
-  title: { type: String, required: true },
-  photo: { type: String, required: true },
-  owner: { type: String, required: true },
-  showPrice: { type: Boolean, default: false },
   cat: { type: Boolean, default: false },
 });
+const route = useRoute();
+console.log(route.params.id);
+
+const { data } = await useFetch(`/api/itemsMarket/${route.params.id}`);
 </script>
 
 <style scoped></style>

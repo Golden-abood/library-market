@@ -11,16 +11,18 @@
       </div>
       <Categories :categories="categories" />
       <Create />
-      <ItemsMarket :items="data?.itemsMarket" />
+      <ItemsMarket />
       <Footer />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { Category } from "@/types/index";
+
 const loading = ref(false);
 
-const categories = [
+const categories: Category[] = [
   {
     icon: "images/icon-01.png",
     text: "Blockchain",
@@ -46,13 +48,11 @@ const categories = [
     text: "Triple NFT",
   },
 ];
-const { data } = await useFetch("/api/itemsMarket");
 onMounted(async () => {
   setTimeout(async () => {
     loading.value = true;
   }, 3000);
 });
-loading.value = false;
 </script>
 
 <style scoped></style>

@@ -68,7 +68,7 @@
             <label for="one" class="flex justify-between text-white">
               All Categories
               <select name="" id="one" class="rounded-5 w-[20%] lg:w-[13%]">
-                <option v-for="item in list" value="">{{ item }}</option>
+                <option v-for="item in list" :value="item">{{ item }}</option>
               </select>
             </label>
           </div>
@@ -78,7 +78,7 @@
             <label class="flex justify-between text-white" for="two">
               Available
               <select name="" id="two" class="rounded-5 w-[20%] lg:w-[13%]">
-                <option v-for="item in list2" value="">{{ item }}</option>
+                <option v-for="item in list2" :value="item">{{ item }}</option>
               </select>
             </label>
           </div>
@@ -89,10 +89,10 @@
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-[20px] gap-y-[40px] pb-[200px] lg:px-[100px]"
       >
         <div
-          v-for="author in authors"
+          v-for="item in authors"
           class="card relative text-white flex-col justify-center rounded-5 py-[40px] px-[30px] bg-light border-1 border-solid border-bocolor"
         >
-          <Card :element="author" />
+          <Card :author="item" />
         </div>
       </div>
     </div>
@@ -100,11 +100,14 @@
 </template>
 
 <script setup lang="ts">
-import { storeToRefs } from "pinia";
 import { Navigation, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { useAppStore } from "../../stores/app";
-const appStore = useAppStore();
+import { Author } from "~/types";
+import { PropType } from "vue";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+
 const items = [
   {
     AuthorPhoto: "images/author.jpg",
@@ -127,20 +130,15 @@ const items = [
     name: "Bored Ape Club",
   },
 ];
-onMounted(() => {
-  appStore.getExplore();
-});
+
 defineProps({
-  authors: { type: Array, required: true },
+  authors: { type: Object as PropType<Author>, required: true },
 });
 const actions = [
   "material-symbols:favorite-rounded",
   "material-symbols:back-hand",
   "ph:currency-dollar",
 ];
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
 
 const list = ref([
   "All Items",

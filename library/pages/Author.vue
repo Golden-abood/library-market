@@ -8,7 +8,7 @@
         title="Author Details"
         :showButton="true"
       />
-      <AuthorItems :authors="data?.authors" />
+      <AuthorItems :authors="data?.authors!!" />
       <Create />
       <Footer />
     </div>
