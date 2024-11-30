@@ -46,7 +46,7 @@
         >
       </li>
       <li
-        class="mr-0 md:mr-7 font-medium cursor-pointer w-[110px] transition duration-100 text-center flex-nowrap text-base hover:rounded-5 min-w-[23%] hover:py-2"
+        class="font-medium cursor-pointer min-w-[110px] transition duration-100 text-center flex-nowrap text-base hover:rounded-5"
       >
         <nuxt-link class="nuxt-link transition duration-300" to="CreateYours"
           >Create Yours</nuxt-link
